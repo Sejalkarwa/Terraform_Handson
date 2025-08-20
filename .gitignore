@@ -1,0 +1,14 @@
+# Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars    # don't commit files that contain credentials
+# keys
+*.pem
+*.key
+# IDE
+.vscode/
+.idea/
+# OS
+.DS_Store
+Thumbs.db
