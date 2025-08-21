@@ -1,27 +1,27 @@
 # Ignore everything
 *
 
-# But keep .tf files
+# Allow directories (so .tf files inside are not blocked)
+!*/
+
+# Keep terraform files
 !*.tf
 
-# Also keep .gitignore and README.md
+# Keep documentation
 !.gitignore
 !README.md
 
-# Ignore Terraform state files
+# Ignore Terraform state and cache
 *.tfstate
 *.tfstate.*
 .terraform/
 .terraform.*
-terraform.tfstate
-terraform.tfstate.*
-terraform.tfvars
-*.tfvars
-
-# Ignore lock file
 .terraform.lock.hcl
 
-# Ignore sensitive files (keys, certs, etc.)
+# Ignore variable files
+*.tfvars
+
+# Ignore sensitive files
 *.pem
 *.key
 *.crt
@@ -30,4 +30,3 @@ terraform.tfvars
 *.pfx
 *.p12
 *.jks
-
