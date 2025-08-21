@@ -1,14 +1,33 @@
-# Terraform files
+# Ignore everything
+*
+
+# But keep .tf files
+!*.tf
+
+# Also keep .gitignore and README.md
+!.gitignore
+!README.md
+
+# Ignore Terraform state files
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 .terraform/
-*.tfvars    # don't commit files that contain credentials
-# keys
+.terraform.*
+terraform.tfstate
+terraform.tfstate.*
+terraform.tfvars
+*.tfvars
+
+# Ignore lock file
+.terraform.lock.hcl
+
+# Ignore sensitive files (keys, certs, etc.)
 *.pem
 *.key
-# IDE
-.vscode/
-.idea/
-# OS
-.DS_Store
-Thumbs.db
+*.crt
+*.cer
+*.der
+*.pfx
+*.p12
+*.jks
+
